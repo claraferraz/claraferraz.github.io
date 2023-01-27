@@ -33,7 +33,7 @@
 </head>
 
 <body>
-  <div align="center" id="cabecalho">
+  <header align="center" id="cabecalho">
     <img src="clara-hands-on-the-face.png" alt="Clara's Profile Picture" width="150px">
     <h1>Clara Ferraz</h1>
     <p>João Pessoa, Paraíba, Brasil</p>
@@ -43,26 +43,31 @@
       <a href="https://linkedin.com/in/claraferraz">
         LinkedIn</a>
       </p>
-  </div>
+    </header>
 
+  <nav>
   <ul id="menu">
-    <li><a href="#descrição">Descrição</a></li>
-    <li><a href="#Experiência">Experiência</a></li>
-    <li><a href="#Educação">Educação</a></li>
-    <li><a href="#Publicações">Publicações</a></li>
+    <li><a href="#descricao">Descrição</a></li>
+    <li><a href="#Experiencias">Experiência</a></li>
+    <li><a href="#Educacao">Educação</a></li>
+    <li><a href="#Publicacoes">Publicações</a></li>
     <li><a href="#Habilidades">Habilidades</a></li>
     <li><a href="#Atividades">Atividades</a></li>
     <li><a href="Hobbies.html">Hobbies</a></li>
   </ul>
+  </nav>
   <!-- o menu fiz uma lista e em cima no head coloquei o display:flex para os ítens da lista ficarem lado a lado. 
   O list-style: none foi para tirar os bullet points e o padding-left: 0 tira a margem a esquerda-->
 
-  <p id="descrição">Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês e tradução. Meus interesses são em línguas estrangerias, principalmente inglês e
+  <section id="descricao">
+  <p>Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês e tradução. Meus interesses são em línguas estrangerias, principalmente inglês e
   espanhol.Também possuo interesse na área de aviação, sobretudo na carreira de comissária de bordo. Atualmente estou estudando e adquirindo habilidades em desenvolvimento de web.</p>
+</section>
   <hr>
 
-  <h2 class="Experiencias">Experiência</h2>
-  <table id="experiência1" cellspacing="5" class="Experiencias">
+  <section id="Experiencias" class="Experiencias">
+  <h2>Experiência</h2>
+  <table id="experiencia1" cellspacing="5" class="Experiencias">
     <thead>
       <tr>
         <th class="empresa">CollabFirst</th>
@@ -84,7 +89,7 @@ técnico de fibra ótica e técnico de torre eólica.
     </tbody>
   </table>
 
-  <table id="experiência2" cellspacing="5" class="Experiencias">
+  <table id="experiencia2" cellspacing="5" class="Experiencias">
     <thead>
       <tr>
         <th class="empresa">InFlux English School</th>
@@ -102,7 +107,7 @@ técnico de fibra ótica e técnico de torre eólica.
     </tbody>
   </table>
 
-  <table id="experiência3" cellspacing="5" class="Experiencias">
+  <table id="experiencia3" cellspacing="5" class="Experiencias">
     <thead>
       <tr>
         <th class="empresa">Da Paraíba Para o Mundo</th>
@@ -122,7 +127,7 @@ técnico de fibra ótica e técnico de torre eólica.
     </tbody>
   </table>
 
-  <table id="experiência4" cellspacing="5" class="Experiencias">
+  <table id="experiencia4" cellspacing="5" class="Experiencias">
     <thead>
       <tr>
         <th class="empresa">Internacionalize</th>
@@ -140,7 +145,7 @@ técnico de fibra ótica e técnico de torre eólica.
     </tbody>
   </table>
 
-  <table id="experiência5" cellspacing="5" class="Experiencias">
+  <table id="experiencia5" cellspacing="5" class="Experiencias">
     <thead>
       <tr>
         <th class="empresa">Ayres Promoções e Eventos</th>
@@ -157,42 +162,46 @@ técnico de fibra ótica e técnico de torre eólica.
       </tr>
     </tbody>
   </table>
+</section>
   <hr>
 
-  <h2 class="Educação">Educação</h2>
-  <div id="educação1" class="Educação">
+<section id="Educacao" class="Educacao">
+  <h2>Educação</h2>
+  <div id="educacao1" class="Educacao">
     <p>JULHO 2022 <br>
       <strong>LÍNGUAS ESTRANGEIRAS APLICADAS ÀS NEGOCIAÇÕES INTERNACIONAIS</strong>, UNIVERSIDADE FEDERAL DA PARAÍBA <br>
       Bacharelado
     </p>
   </div>
-  <div id="educação2" class="Educação">
+  <div id="educacao2" class="Educacao">
     <p>JANEIRO 2023 - ATUALMENTE <br>
       <strong>CURSO DE JAVASCRIPT E TYPESCRIPT DO BÁSICO AO AVANÇADO</strong>, 
       UDEMY <br>
       Curso profissionalizante
     </p>
   </div>
-  <div id="educacao5" class="Educação">
+  <div id="educacao5" class="Educacao">
     <p>JANEIRO 2023 <br>
       <strong> KICKOFF WATERFALL</strong>, PROJECT MANEGEMENT INSTITUTE <br>
       Curso de capacitação
     </p>
   </div>
-  <div id="educação3" class="Educação">
+  <div id="educacao3" class="Educacao">
     <p>OUTUBRO 2021 <br>
       <strong>COMISSÁRIA DE BORDO</strong>, NAV TREINAMENTOS <br>
       Curso profissionalizante
     </p>
   </div>
-  <div id="educação4" class="Educação">
+  <div id="educacao4" class="Educacao">
     <p>JULHO 2021 <br>
       <strong>AVIATION ENGLISH LEVEL 3</strong>, ICAO TRAINAIR PLUS <br>
       Curso de idioma
     </p>
   </div>
+</section>
   <hr>
-  <div id="Publicações">
+
+  <section id="Publicacoes">
     <h2>Publicações</h2>
     <p><strong>A LÍNGUA INGLESA COMO IDIOMA OFICIAL PARA PILOTOS E CONTROLADORES DE VOO DA AVIAÇÃO CIVIL INTERNACIONAL: UMA QUESTÃO DE SEGURANÇA</strong> <br>
       Monografia do curso de Línguas Estrangeiras Aplicadas às Negociações Internacionais <br>
@@ -200,10 +209,10 @@ técnico de fibra ótica e técnico de torre eólica.
       <br>
       <a href="TCC-Clara-Ferraz.pdf">Download arquivo pdf</a>
     </p>
-  </div>
+  </section>
   <hr>
 
-  <div id="Habilidades">
+  <section id="Habilidades">
     <h2>Habilidades</h2>
 
     <table cellspacing="10">
@@ -229,13 +238,13 @@ técnico de fibra ótica e técnico de torre eólica.
       </tr>
     </table>
 
-  </div>
+  </section>
 
   <!-- para colocar as duas tabelas lado a lado, coloquei na mesma row, porém em células diferentes.
 para ficar com as linhas alinhadas, eu tive que colocar uma célula em branco, porém ela vazia não estava reconhecendo,
 aí eu coloquei o código &nbsp; que deixa ela em branco.-->
   <hr>
-  <div id="Atividades">
+  <section id="Atividades">
     <h2>Atividades</h2>
     <p>No curso de Línguas Estrangeiras Aplicadas às Negociações Internacionais pude estudar a língua inglesa, francesa e espanhola, e seus usos aplicados para direito, negócios e turismo. Além disso, no curso estudei noções básicas de negócios como
       administração, marketing, direito, economia, turismo e contabilidade.</p>
@@ -245,7 +254,7 @@ aí eu coloquei o código &nbsp; que deixa ela em branco.-->
       de referências bibliográficas e arquivos de versões do meu TCC.</p>
     <p>Atualmente ingressei na jornada do aprendizado em programação, especialmente web development. Inspirada por conhecidos que atuam na área, encontrei um grande interesse em desenvolvimento de sites. Estou estudando a distância através da
       plataforma Udemy.</p>
-  </div>
+    </section>
 
 </body>
 
