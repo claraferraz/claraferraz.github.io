@@ -9,9 +9,17 @@
   <title> Clara Ferraz</title>
 
   <style>
+    *{
+      margin: 0;
+    }
     #cabecalho{
-      background-color: rgba(20, 255, 20, 0.238);
+      background-color: rgb(203, 241, 203);
       text-align: center;
+      padding: 15px;
+    }
+    #English-version{
+      position: absolute;
+      right:15px;
     }
     #menu {
       display: flex;
@@ -20,6 +28,29 @@
       padding-left: 0;
       justify-content: center;
       background-color: rgb(116, 180, 116);
+      padding: 10px;
+    }
+    #menu a{
+      color: black;
+      text-decoration: none;
+    }
+    #descricao{
+      margin:8px;
+    }
+    #Experiencias{
+      margin:8px;
+    }
+    #Educacao{
+      margin:8px;
+    }
+    #Publicacoes{
+      margin:8px;
+    }
+    #Habilidades{
+      margin:8px;
+    }
+    #Atividades{
+      margin:8px;
     }
     .links{
       font-size: 18px;
@@ -34,8 +65,12 @@
 </head>
 
 <body>
+<div id="English-version">
+  <a href="English-version.html">English Version</a>
+</div>
+    
   <header id="cabecalho">
-    <img src="clara-hands-on-the-face.png" alt="Clara's Profile Picture" width="150">
+    <img src="clara-hands-on-the-face.png" alt="Foto de Perfil de Clara" width="150">
     <h1>Clara Ferraz</h1>
     <p>João Pessoa, Paraíba, Brasil</p>
     <p class="links">
@@ -62,8 +97,8 @@
 
   <section id="descricao">
   <h2>Descrição</h2>
-  <p>Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês e tradução. Meus interesses são em línguas estrangerias, principalmente inglês e
-  espanhol.Também possuo interesse na área de aviação, sobretudo na carreira de comissária de bordo. Atualmente estou estudando e adquirindo habilidades em desenvolvimento de web.</p>
+  <p>Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês, tradução e atendimento ao cliente. Meus interesses são em línguas estrangeiras, principalmente inglês e
+  espanhol.Também possuo interesse na área de aviação, sobretudo na carreira de comissária de bordo. Atualmente estou estudando e adquirindo habilidades em desenvolvimento de web. Este site está em constate constução e aprimoramento conforme aprendo e aplico meus conhecimentos em Web Development.</p>
 </section>
   <hr>
 
@@ -87,7 +122,7 @@ técnico de fibra ótica e técnico de torre eólica.
       </tr>
       <tr>
         <td>Tampa, FL, Estados Unidos (home office)</td>
-        <td>nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     </tbody>
   </table>
@@ -165,7 +200,7 @@ técnico de fibra ótica e técnico de torre eólica.
       </tr>
       <tr>
         <td>João Pessoa, PB, Brasil</td>
-        <td>&nbsp;</td>
+        <td>&nbsp</td>
       </tr>
     </tbody>
   </table>
@@ -249,7 +284,7 @@ técnico de fibra ótica e técnico de torre eólica.
 
   <!-- para colocar as duas tabelas lado a lado, coloquei na mesma row, porém em células diferentes.
 para ficar com as linhas alinhadas, eu tive que colocar uma célula em branco, porém ela vazia não estava reconhecendo,
-aí eu coloquei o código "&nbsp;" que deixa ela em branco.-->
+aí eu coloquei o código &nbsp; (não esquecer o ;) que deixa ela em branco.-->
   <hr>
   <section id="Atividades">
     <h2>Atividades</h2>
