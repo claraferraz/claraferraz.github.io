@@ -12,6 +12,9 @@
     *{
       margin: 0;
     }
+    hr{
+      margin:15px 0px;
+    }
     #cabecalho{
       background-color: rgb(203, 241, 203);
       text-align: center;
@@ -21,14 +24,19 @@
       position: absolute;
       right:15px;
     }
+    .menu{
+      position:sticky;
+      top:0px;
+      background-color: rgb(116, 180, 116);
+      padding: 10px;
+      margin-bottom: 10px;
+    }
     #menu {
       display: flex;
       list-style: none;
       gap: 10px;
       padding-left: 0;
       justify-content: center;
-      background-color: rgb(116, 180, 116);
-      padding: 10px;
     }
     #menu a{
       color: black;
@@ -81,7 +89,7 @@
       </p>
     </header>
 
-  <nav>
+  <nav class="menu">
   <ul id="menu">
     <li><a href="#descricao">Descrição</a></li>
     <li><a href="#Experiencias">Experiência</a></li>
@@ -100,8 +108,8 @@
   <p>Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês, tradução e atendimento ao cliente. Meus interesses são em línguas estrangeiras, principalmente inglês e
   espanhol.Também possuo interesse na área de aviação, sobretudo na carreira de comissária de bordo. Atualmente estou estudando e adquirindo habilidades em desenvolvimento de web. Este site está em constate constução e aprimoramento conforme aprendo e aplico meus conhecimentos em Web Development.</p>
 </section>
-  <hr>
-
+  
+<hr>
   <section id="Experiencias" class="Experiencias">
   <h2>Experiência</h2>
   <table id="experiencia1" class="Experiencias">
@@ -249,7 +257,7 @@ técnico de fibra ótica e técnico de torre eólica.
       Monografia do curso de Línguas Estrangeiras Aplicadas às Negociações Internacionais <br>
       Data de Publicação: 06.07.2022
       <br>
-      <a href="TCC-Clara-Ferraz.pdf">Download arquivo pdf</a>
+      <a href="TCC-Clara-Ferraz.pdf">Baixar aquivo (PDF, 562KB) </a>
     </p>
   </section>
   <hr>
