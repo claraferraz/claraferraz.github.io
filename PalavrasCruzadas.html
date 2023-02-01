@@ -8,132 +8,143 @@
     <link rel="icon" href="icon.png">
 
 <style>
-    div{
+    form{
         display:flex;
     }
+    input{
+        background-color: transparent;
+        width:100%;
+        border:transparent;
+        text-align: center;
+    }
     table{
+        width:25%;
         border: 1px solid;
-        margin:5px;
-        padding:5px;
-        width: 25%;
+        border-spacing: 0px;
     }
     th{
         border-bottom: 0.5px solid;
+        padding:5px;
     }
     td{
         border-bottom: 0.5px dotted;
+        padding:3px;
+        text-align: center;
+    }
+    button{
+        display:block;
+        color:aliceblue;
+        background-color: rgba(68, 65, 84, 0.909);
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 15px;
+        
     }
     .jogador1{
-        background-color:rgb(255, 171, 171) ;
+        background-color:#ea9999;
     }
     .jogador2{
-        background-color: rgb(155, 182, 255);
+        background-color: #9fc5e8;
     }
     .jogador3{
-        background-color: rgb(255, 255, 166);
+        background-color: #ffe599;
     }
    .jogador4{
-        background-color: rgb(182, 240, 182);
+        background-color: #b6d7a8;
     }
-
+    #jogador1{
+        background-color:#f4cccc;
+    }
+    #jogador2{
+        background-color: #c9daf8;
+    }
+    #jogador3{
+        background-color: #fff2cc;
+    }
+   #jogador4{
+        background-color: #d9ead3;
+    }
 </style>
-
 </head>
 
 <body>
-    
-<div>
-    <tr class="jogador1">
-        <td>Jogardor 1</td>
-        <td>3</td>
-    </tr>
-    <tr class="jogador 2">
-        <td>Jogador 2</td>
-        <td>4</td>
-    </tr>
-    <tr class="jogador3">
-        <td>Jogador 3</td>
-        <td>5</td>
-    </tr>
-    <tr class="jogador4">
-        <td>Jogador 4</td>
-        <td>6</td>
-    </tr>
-</div>
-    
-<div>
-    <table class="jogador1">
-<tr>
-    <thead>
-        <th>Jogador 1</th>
+       
+<form>
+    <table>
+    <thead class="jogador1">
+        <tr> 
+        <th class="nome"><input type="text" placeholder="Jogador 1" name="nome"></th>
         <th>Pontos</th>
         <th>Total</th>
+    </tr>
     </thead>
-</tr>
-<tbody>
-<tr>
-    <td>exemplo</td>
-    <td>5</td>
-    <td>5</td>
-</tr>
+    <tbody  id="jogador1">
+        <tr>
+            <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
+            <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
+            <td>5</td>
+        </tr>
 
 </tbody>    
 </table>
 
-<table class="jogador2">
-    <tr>
-        <thead>
-            <th>Jogador 2</th>
+<table>
+    <thead  class="jogador2">
+        <tr>
+            <th class="nome"><input type="text" placeholder="Jogador 2" name="nome"></th>
             <th>Pontos</th>
             <th>Total</th>
+        </tr>
         </thead>
-    </tr>
-    <tbody>
+    <tbody  id="jogador2">
     <tr>
-        <td>exemplo</td>
-        <td>5</td>
+        <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
+        <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
         <td>5</td>
     </tr>
     
     </tbody>    
 </table>
 
-<table class="jogador3">
-    <tr>
-        <thead>
-            <th>Jogador 3</th>
+<table>
+    <thead class="jogador3">
+        <tr>
+            <th class="nome"><input type="text" placeholder="Jogador 3" name="nome"></th>
             <th>Pontos</th>
             <th>Total</th>
+        </tr>
         </thead>
-    </tr>
-    <tbody>
+    <tbody  id="jogador3">
         <tr>
-            <td>exemplo</td>
-            <td>5</td>
+            <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
+            <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
             <td>5</td>
         </tr>
         
     </tbody>    
 </table>
 
-<table class="jogador4">
-    <tr>
-        <thead>
-            <th>Jogador 4</th>
+<table>
+    <thead class="jogador4">
+        <tr>
+            <th class="nome"><input type="text" placeholder="Jogador 4" name="nome"></th>
             <th>Pontos</th>
             <th>Total</th>
+        </tr>
         </thead>
-    </tr>
-    <tbody>
+    <tbody  id="jogador4">
     <tr>
-        <td>exemplo</td>
-        <td>5</td>
+        <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
+        <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
         <td>5</td>
     </tr>
             
 </tbody>    
 </table>
-</div>
+</form>
+
+<button id="mais">+</button>
+<button id="limpar" type="reset">Limpar</button>
 
 </body>
 </html>
