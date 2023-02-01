@@ -6,65 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palavras Cruzadas</title>
     <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="Assets\CSS\stylespalavrascruzadas.css">
 
-<style>
-    form{
-        display:flex;
-    }
-    input{
-        background-color: transparent;
-        width:100%;
-        border:transparent;
-        text-align: center;
-    }
-    table{
-        width:25%;
-        border: 1px solid;
-        border-spacing: 0px;
-    }
-    th{
-        border-bottom: 0.5px solid;
-        padding:5px;
-    }
-    td{
-        border-bottom: 0.5px dotted;
-        padding:3px;
-        text-align: center;
-    }
-    button{
-        display:block;
-        color:aliceblue;
-        background-color: rgba(68, 65, 84, 0.909);
-        margin: 5px;
-        cursor: pointer;
-        border-radius: 15px;
-        
-    }
-    .jogador1{
-        background-color:#ea9999;
-    }
-    .jogador2{
-        background-color: #9fc5e8;
-    }
-    .jogador3{
-        background-color: #ffe599;
-    }
-   .jogador4{
-        background-color: #b6d7a8;
-    }
-    #jogador1{
-        background-color:#f4cccc;
-    }
-    #jogador2{
-        background-color: #c9daf8;
-    }
-    #jogador3{
-        background-color: #fff2cc;
-    }
-   #jogador4{
-        background-color: #d9ead3;
-    }
-</style>
 </head>
 
 <body>
@@ -81,7 +24,7 @@
     <tbody  id="jogador1">
         <tr>
             <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
-            <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
+            <td class="pontos"><input type="number" placeholder="0" name="pontos" min="0"></td>
             <td>5</td>
         </tr>
 
@@ -99,11 +42,11 @@
     <tbody  id="jogador2">
     <tr>
         <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
-        <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
+        <td class="pontos"><input type="number" placeholder="0" name="pontos" min="0"></td>
         <td>5</td>
     </tr>
     
-    </tbody>    
+    </tbody>
 </table>
 
 <table>
@@ -117,7 +60,7 @@
     <tbody  id="jogador3">
         <tr>
             <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
-            <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
+            <td class="pontos"><input type="number" placeholder="0" name="pontos" min="0"></td>
             <td>5</td>
         </tr>
         
@@ -135,7 +78,7 @@
     <tbody  id="jogador4">
     <tr>
         <td class="palavra"><input type="text" placeholder="Palavra" name="palavra"></td>
-        <td class="pontos"><input type="number" placeholder="0" name="pontos"></td>
+        <td class="pontos"><input type="number" placeholder="0" name="pontos" min="0"></td>
         <td>5</td>
     </tr>
             
