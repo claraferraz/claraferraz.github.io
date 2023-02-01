@@ -7,28 +7,22 @@
     #cabecalho{
       background-color: rgb(203, 241, 203);
       text-align: center;
-      margin:0px;
       padding:5px;
     }
     #English-version{
       position: absolute;
       right:15px;
-      padding:0px;
-      margin:0px;
     }
     .menu{
       position:sticky;
       top:0px;
       background-color: rgb(116, 180, 116);
-      margin:0px;
       padding:5px;
     }
     #menu {
       display: flex;
       list-style: none;
       gap: 10px;
-      padding-left: 0;
-      margin:0px;
       justify-content: center;
     }
     #menu a{
@@ -37,7 +31,6 @@
     }
     .links{
       font-size: 18px;
-      margin-bottom: 0px;
       padding-bottom:10px;
     }
     .empresa{
