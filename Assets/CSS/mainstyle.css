@@ -1,41 +1,60 @@
-    body{
-      margin: 0px 8px 8px 8px;
-    }
-    hr{
-      margin:15px 0px;
-    }
-    #cabecalho{
-      background-color: rgb(203, 241, 203);
-      text-align: center;
-      padding:5px;
-    }
-    #English-version{
-      position: absolute;
-      right:15px;
-    }
-    .menu{
-      position:sticky;
-      top:0px;
-      background-color: rgb(116, 180, 116);
-      padding:5px;
-    }
-    #menu {
-      display: flex;
-      list-style: none;
-      gap: 10px;
-      justify-content: center;
-    }
-    #menu a{
-      color: black;
-      text-decoration: none;
-    }
-    .links{
-      font-size: 18px;
-      padding-bottom:10px;
-    }
-    .empresa{
-      width:150px;
-    }
-    .cargo{
-      text-align: left;
-    }
+/*
+Especificação de seletor (0,0,0)
+ID, Classes, atributos e pseudo-classes, elementos e pseudo-elementos
+0	0									   0
+Os números vão aumentando conforme as ids, classes ou elementos selecionados para edição nmo CSS
+quanto maior o número (ex: (1,0,0) > (0,1,0)) vai ser a ordem a ser aplicado a configuração do CSS
+!important: o !important vai fazer com que essa regra seja prioridade (evitar usar)
+em caso de empate de especificidade, o que vai prevalecer será o que é escrito depois
+*/
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+p, 
+h2,
+table{
+  margin:10px;
+}
+#English-version {
+	position: absolute;
+	right: 15px;
+}
+.cabecalho {
+	background-color: rgba(203, 241, 203, 0.343);
+	text-align: center;
+	padding: 5px;
+}
+.links {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+#menu a, .links a {
+	color: black;
+	text-decoration: none;
+}
+#menu a:hover, .links a:hover{
+	text-decoration: underline;
+}
+.menu {
+	position: sticky;
+	top: 0px;
+	background-color: rgb(116, 180, 116);
+	padding: 5px;
+}
+#menu {
+	display: flex;
+	list-style: none;
+	gap: 10px;
+	justify-content: center;
+}
+section:nth-child(odd){
+	background-color:rgb(232, 255, 232);	
+}
+.empresa {
+	width: 150px;
+}
+.cargo {
+	text-align: left;
+}
