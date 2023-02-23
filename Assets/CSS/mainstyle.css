@@ -1,120 +1,252 @@
-/*
-Especificação de seletor (0,0,0)
-ID, Classes, atributos e pseudo-classes, elementos e pseudo-elementos
-0	0									   0
-Os números vão aumentando conforme as ids, classes ou elementos selecionados para edição nmo CSS
-quanto maior o número (ex: (1,0,0) > (0,1,0)) vai ser a ordem a ser aplicado a configuração do CSS
-!important: o !important vai fazer com que essa regra seja prioridade (evitar usar)
-em caso de empate de especificidade, o que vai prevalecer será o que é escrito depois
-*/
-html{
-	scroll-behavior: smooth;
+:root {
+    --gap: 3rem;
+    --main-color: #330033;
+    --secondary-color: #530153;
+    --light-gray: #eee;
+    --dark-green: #06150059;
 }
 * {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
-p, 
-h2,
-table{
-  margin:10px;
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-#English-version {
-	position: absolute;
-	right: 15px;
-	top:0px;
-	backdrop-filter: blur(10px);
-	border-radius:5px;
+body {
+    font-family:'Open Sans', sans-serif;
+    font-size: 2rem;
+    padding-top: 8vh;
 }
-#texto-cabecalho {
-	backdrop-filter: blur(2px);
-	border-radius:40px;
-	width: fit-content;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
 }
-#cabecalho {
-	background-color: rgba(140, 179, 116, 0.388);
-	background-image: url("../Img/folhas.png");
-	background-blend-mode: soft-light;
-	background-size:cover;
-	color:whitesmoke;
-	text-align: center;
-	padding: 5px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
 }
-.links {
-	font-size: 1.1rem;
+h2 {
+    font-size: 5.5rem;
+    margin-bottom: 5rem;
 }
-#menu a{
-	color: black;
-	text-decoration: none;
+h3 {
+    font-size: 3rem;
 }
-.links a{
-	color:whitesmoke;
-	text-decoration:none;
+h4 {
+    font-size: 4.5rem;
 }
-#menu a:hover, .links a:hover{
-	text-decoration: underline;
+h5 {
+    font-size: 4rem;
 }
-.menu-bar { 
-	position: fixed;
-	left:0px;
-	top:0px;
-	height:100%;
-	width: 200px;
-	display:block;
-	background-color: rgb(116, 180, 116);
-	padding: 5px;
-	justify-content: space-between;
+h6 {
+    font-size: 3.5rem;
 }
-#menu {
-	line-height: 30px;
-	list-style: none;
-	gap: 10px;
-	justify-content: center;
-	align-items: center;
+a{
+    text-decoration: none;
 }
-.menu-button{
-	position:absolute;
-	left:200px;
-	top:0px;
-	background-color:rgb(116, 180, 116);
-	border-radius: 5px;
-	width: 40px;
-	height: 40px;
-	border:1px solid #649b64;
-	cursor: pointer;
+.section {
+    min-height: 100vh;
+    min-width:90vh;
 }
-.menu-button:active{
-	background-color:#649b64;
+.main-bg {
+    background-image: url(../Img/folhas.png);
+    background-color: var(--dark-green);
+    background-blend-mode:overlay;
+    background-position: center;
+    background-size: cover;
+    color:white;
 }
-.resume{
-	margin-left: 200px;
+.white-bg {
+    background-color: white;
+    color: var(--main-color);
 }
-section:nth-child(even){
-	background-color:rgb(232, 255, 232);	
+.main-content {
+    padding: 10rem 3rem;
 }
-.empresa {
-	width: 150px;
+.menu {
+    position:fixed;
+    z-index: 2;
+    top:0;
+    right:0;
+    width:100%;
+    background-color: white;
+    border-bottom:0.01px solid var(--light-gray);
 }
-.cargo {
-	text-align: left;
+.menu-content {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0rem 3rem;
+
 }
-.educação{
-	line-height: 2px; 
+.menu h1 {
+    font-size: 2.3rem;
 }
-@media (max-width: 426px) {
-	.menu-bar {
-		position:absolute;
-		background-color: rgb(116, 180, 116);
-		padding: 5px;
-	}
+.menu h1 a {
+    color: var(--main-color)
 }
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu ul li a {
+    position:relative;
+    display: block;
+    padding:2rem;
+    font-size: 1.8rem;
+    color: var(--main-color)
+}
+.menu ul li a::after {
+    content:'';
+    position:absolute;
+    bottom:1rem;
+    left:50%;
+    width:0px;
+    height:0.2rem;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover::after {
+    left:15%;
+    width:70%;
+}
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap:3rem;
+    align-items: center;
+}
+.bio {
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.contact-links {
+    margin-top: var(--gap);
+    display: flex;
+    justify-content: left;
+    gap: var(--gap);
+    list-style: none;
+}
+.contact-links a {
+    color:white;
+    text-decoration: underline;
+}
+.profile-img img {
+    max-height: 70vh;
+    border-radius: 500rem;
+}
+.exp-box {
+    position: relative;
+    padding: 0 3rem 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 0.3rem solid var(--secondary-color);
+}
+.exp-box .date {
+    margin-top: -2rem;
+    position: relative;
+}
+.exp-box .date::before {
+    content: ' ';
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    left: -3.7rem;
+    top: 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--secondary-color);  
+}
+.exp-box:last-of-type {
+    padding-bottom: 0;
+    margin-bottom:5rem;
+}
+.edu-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    align-items: top;
+    justify-content: center;
+}
+.edu-box{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.edu-box .degree{
+    font-size: 1.5rem;
+}
+.habilities-content {
+    padding-top:5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.habilities-content table thead {
+    background-color: var(--light-gray);
+}
+.habilities-content td, th {
+    text-align: left;
+    padding-right: var(--gap);
+    line-height: var(--gap);
+    border-bottom: 0.1rem solid var(--light-gray);
+} 
+.publication-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--gap);
+    align-items: center;
+}
+.TCC {
+    display:flex;
+    flex-direction: column;
+    gap: var(--gap);
+    align-items: stretch;
+}
+.publication-img img {
+    max-height: 65vh;
+    border-radius: 50px;
+}
+.publication-content a {
+    color:white;
+    text-decoration: underline;
+}
+.skilled {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;    
+}
+.portfolio-content h3, .portfolio-content img {
+    padding-bottom: var(--gap);
+}
+.portfolio-content img {
+    cursor: zoom-in;
+    max-width: 100%;
+    max-height: 36rem;
+    transition: all 300ms ease-in-out;
+}
+.portfolio-content .skilled img:active {
+    transform: translate(50%, 50%) scale(2);
+}
+.portfolio-content .skilled img:active:last-of-type {
+    transform: translate(-50%, 50%) scale(2);
+}
+.portfolio-content .scrabble img:active {
+    transform: translate(0%, 5%);
+}
+.portfolio-content .perfume img:active {
+    transform: translate(50%, 10%) scale(1.5);
+}
+.portfolio-content a {
+    color: var(--primary-color);
+}
+.portfolio-content a:hover {
+    color: var(--dark-green);
+}
+
