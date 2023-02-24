@@ -249,4 +249,58 @@ a{
 .portfolio-content a:hover {
     color: var(--dark-green);
 }
-
+.form-grid {
+    margin: var(--gap);
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap:var(--gap);
+}
+.form-group {
+    flex: 40%;
+}
+.form-group label {
+    display: block;
+}
+.form-group input, .form-group textarea {
+    border: none;
+    background-color: var(--light-gray);
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    outline: var(--secondary-color);
+}
+.form-group input:focus, .form-group textarea:focus{
+    background: white;
+}
+.full-width {
+    flex: 1 1 100%;
+}
+.form-group button {
+    border: 0.5rem solid white;
+    background: none;
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out
+}
+.form-group button:hover {
+    background: white;
+    color: var(--main-color)
+}
+.form-group button:active {
+    background: var(--light-gray);
+    color: var(--main-color)
+}
+.form-group::placeholder {
+    color: var(--main-color);
+}
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
