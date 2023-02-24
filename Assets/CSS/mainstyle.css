@@ -28,19 +28,10 @@ h1 {
 }
 h2 {
     font-size: 5.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 h3 {
     font-size: 3rem;
-}
-h4 {
-    font-size: 4.5rem;
-}
-h5 {
-    font-size: 4rem;
-}
-h6 {
-    font-size: 3.5rem;
 }
 a{
     text-decoration: none;
@@ -133,9 +124,13 @@ a{
     color:white;
     text-decoration: underline;
 }
-.profile-img img {
-    max-height: 70vh;
-    border-radius: 500rem;
+.profile-img {
+    background-image: url(../Img/me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 25vw;
+    height: 70vh;
+    border-radius: 50rem;
 }
 .exp-box {
     position: relative;
@@ -146,7 +141,7 @@ a{
     border-left: 0.3rem solid var(--secondary-color);
 }
 .exp-box .date {
-    margin-top: -2rem;
+    margin-top: 2rem;
     position: relative;
 }
 .exp-box .date::before {
@@ -164,37 +159,42 @@ a{
     padding-bottom: 0;
     margin-bottom:5rem;
 }
-.edu-content{
+.edu-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
     align-items: top;
     justify-content: center;
 }
-.edu-box{
+.edu-box {
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.edu-box .degree{
+.edu-box .degree {
     font-size: 1.5rem;
 }
-.habilities-content {
+.abilities-content {
     padding-top:5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 } 
-.habilities-content table thead {
+.abilities-content .table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.1rem;
+}
+.abilities-content .table .ability {
+    padding-right: var(--gap);
+}
+.abilities-content .table .ability, .abilities-content .table .level {
+    border-bottom: 0.1rem solid var(--light-gray);
+}
+.abilities-content .table .thead {
     background-color: var(--light-gray);
 }
-.habilities-content td, th {
-    text-align: left;
-    padding-right: var(--gap);
-    line-height: var(--gap);
-    border-bottom: 0.1rem solid var(--light-gray);
-} 
 .publication-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -254,7 +254,7 @@ a{
     border: none;
     display: flex;
     flex-wrap: wrap;
-    gap:var(--gap);
+    gap: var(--gap);
 }
 .form-group {
     flex: 40%;
@@ -303,4 +303,96 @@ a{
 .footer a {
     color: white;
     text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width:800px) {
+    body {
+        font-size: 4rem;
+        padding-top: 8vh;
+    }
+    h2 {
+        font-size: 7.5rem;
+        margin-bottom: 6rem;
+    }
+    h3 {
+        font-size: 5rem;
+    }
+    #intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-img {
+        background-image: url(../Img/clara-hands-on-the-face.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 90vw;
+        max-height: 50vh;
+        border-radius: 0;
+        max-width: unset;
+        background-position: center;
+    }
+    .bio {
+        text-align: left;
+    }
+    .edu-content{
+        display: block;
+    }
+    .edu-box{
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 5rem 0;
+    }
+    .edu-box .degree{
+        font-size: 3.5rem;
+    }
+    .abilities-content td, .abilities-content th {
+        padding-right: 0;
+        line-height: 6rem;
+        border-bottom: 0.1rem solid var(--light-gray);
+    } 
+    .publication-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .skilled {
+        display: block;
+        padding-bottom: 0;
+        gap: 1rem;  
+    }
+    .portfolio-content h3 {
+        padding: 5rem 0;
+    }
+    .portfolio-content img {
+        cursor: zoom-in;
+        max-width: 100%;
+        max-height: 400rem;
+        transition: all 300ms ease-in-out;
+    }
+    .portfolio-content .skilled img:active, 
+    .portfolio-content .skilled img:last-of-type:active,
+    .portfolio-content .scrabble img:active,
+    .portfolio-content .perfume img:active {
+        transform: translate(0%) scale(1);
+    }
+    .form-grid {
+        margin: var(--gap);
+        border: none;
+        display: block;
+    }
+    .form-group {
+        margin: 3rem 0;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 4rem;
+    }
+    .form-group button {
+        font-size: 4rem;
+    }
+    .footer {
+        font-size: 2.5rem;
+    }
+
 }
