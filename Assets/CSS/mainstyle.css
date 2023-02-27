@@ -412,11 +412,13 @@ a{
     .menu-content, .menu ul {
         flex-direction: column;
         justify-content: center;
+        font-size: 4rem;
     }
     .menu-content {
         height: 100%;
     }
     .menu-content h1 {
+        font-size: 5.3rem;
         padding: 2rem;
     }
     .close-menu {
