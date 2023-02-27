@@ -12,15 +12,20 @@
     <title>Clara Ferraz</title>
 </head>
 <body>
-    <input type="checkbox" role="button" aria-label="close menu" id="close-menu" class="close-menu">
-    <label for="close-menu" class="close-menu-label" title="close menu"></label>
+    <input type="checkbox" role="button" aria-label="close menu" aria-pressed="false"
+     id="menu-button" class="menu-button">
+    <label for="menu-button" class="menu-button-lines" title="close menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span> 
+    </label>
     <aside class="menu white-bg">
         <div class="menu-content">
-            <h1 onclick="getElementById('close-menu').checked = false;">
+            <h1 onclick="getElementById('menu-button').checked = false;">
                 <a href="#intro">Clara</a>
             </h1>
             <nav>
-                <ul onclick="getElementById('close-menu').checked = false;">
+                <ul onclick="getElementById('menu-button').checked = false;">
                     <li><a href="#Experiences">Experiência</a></li>
                     <li><a href="#Education">Educação</a></li>
                     <li><a href="#Abilities">Habilidades</a></li>
@@ -51,6 +56,7 @@ espanhol.Também possuo interesse na área de aviação, sobretudo na carreira d
                     <a href="mailto:claraferraz@proton.me">Email</a>
                 </li>
             </ul>
+            <Button class="print" onClick="window.print();">Imprimir Currículo (PDF)</button>
         </div>
     </section>
 
@@ -193,7 +199,7 @@ espanhol.Também possuo interesse na área de aviação, sobretudo na carreira d
             </div>
         </div>
     </section>
-
+<!--
     <section id="Contact" class="section main-content main-bg">
         <div class="contact-form">
             <h2>Contato</h2>
@@ -219,11 +225,12 @@ espanhol.Também possuo interesse na área de aviação, sobretudo na carreira d
                 </div>
             </fieldset>
         </div>
+        
         <div class="footer">
             <p>Feito com 🤍 por 
                 <a href="http://github.com/claraferraz">Clara Ferraz</a></p>
         </div>
-    </section>
+    </section>-->
 
 </body>
 </html>
