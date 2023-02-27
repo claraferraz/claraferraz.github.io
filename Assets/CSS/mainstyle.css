@@ -141,8 +141,8 @@ a{
     border-left: 0.3rem solid var(--secondary-color);
 }
 .exp-box .date {
-    margin-top: 2rem;
     position: relative;
+    top: -1rem;
 }
 .exp-box .date::before {
     content: ' ';
@@ -200,6 +200,9 @@ a{
     grid-template-columns: 1fr 2fr;
     gap: var(--gap);
     align-items: center;
+}
+.TCC h3{
+    text-transform: uppercase;
 }
 .TCC {
     display:flex;
