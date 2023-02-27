@@ -3,7 +3,8 @@
     --main-color: #330033;
     --secondary-color: #530153;
     --light-gray: #eee;
-    --dark-green: #06150059;
+    --transparent-green: #06150059;
+    --dark-green: #061500;
 }
 * {
     margin:0;
@@ -42,7 +43,7 @@ a{
 }
 .main-bg {
     background-image: url(../Img/folhas.png);
-    background-color: var(--dark-green);
+    background-color: var(--transparent-green);
     background-blend-mode:overlay;
     background-position: center;
     background-size: cover;
@@ -247,10 +248,10 @@ a{
     transform: translate(50%, 10%) scale(1.5);
 }
 .portfolio-content a {
-    color: var(--primary-color);
+    color: var(--main-color);
 }
 .portfolio-content a:hover {
-    color: var(--dark-green);
+    color: var(--transparent-green);
 }
 .form-grid {
     margin: var(--gap);
@@ -307,12 +308,15 @@ a{
     color: white;
     text-decoration: underline;
 }
+.close-menu {
+    display: none;
+}
 
 /* Mobile */
 @media (max-width:800px) {
     body {
         font-size: 4rem;
-        padding-top: 8vh;
+        padding-top: 0;
     }
     h2 {
         font-size: 7.5rem;
@@ -398,4 +402,50 @@ a{
         font-size: 2.5rem;
     }
 
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        height: 100%;
+        display: none;
+    }
+    .menu-content, .menu ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu-content {
+        height: 100%;
+    }
+    .menu-content h1 {
+        padding: 2rem;
+    }
+    .close-menu {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+    .close-menu-label::after {
+        content: '☰';
+        color: white;
+        background-color: var(--dark-green);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        position: fixed;
+        z-index: 3;
+        top: 1rem;
+        right: 1rem;
+    }
+    .close-menu:checked~.menu {
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label::after{
+        content: 'X';
+    }
 }
