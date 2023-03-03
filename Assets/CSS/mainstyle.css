@@ -3,8 +3,12 @@
     --main-color: #330033;
     --secondary-color: #530153;
     --light-gray: #eee;
+    --dark-gray-one: #4a4a4a;
+    --dark-gray-two: #363636;
     --transparent-green: #06150059;
     --dark-green: #061500;
+    --print-beige: #fae4d7bb;
+    --print-green: #b5cec4d8;
 }
 * {
     margin:0;
@@ -100,17 +104,17 @@ a{
     transition: all 300ms ease-in-out;
 }
 .menu ul li a:hover::after {
-    left:15%;
-    width:70%;
+    left: 15%;
+    width: 70%;
 }
 #intro {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap:3rem;
+    gap: 3rem;
     align-items: center;
 }
 .bio {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
 }
@@ -263,53 +267,6 @@ a{
 .portfolio-content a:hover {
     color: var(--transparent-green);
 }
-.form-grid {
-    margin: var(--gap);
-    border: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
-}
-.form-group {
-    flex: 40%;
-}
-.form-group label {
-    display: block;
-}
-.form-group input, .form-group textarea {
-    border: none;
-    background-color: var(--light-gray);
-    width: 100%;
-    padding: 1rem;
-    font-size: 2rem;
-    outline: var(--secondary-color);
-}
-.form-group input:focus, .form-group textarea:focus{
-    background: white;
-}
-.full-width {
-    flex: 1 1 100%;
-}
-.form-group button {
-    border: 0.5rem solid white;
-    background: none;
-    color: white;
-    padding: 1rem 3rem;
-    font-size: 3rem;
-    cursor: pointer;
-    transition: all 300ms ease-in-out
-}
-.form-group button:hover {
-    background: white;
-    color: var(--main-color)
-}
-.form-group button:active {
-    background: var(--light-gray);
-    color: var(--main-color)
-}
-.form-group::placeholder {
-    color: var(--main-color);
-}
 .footer {
     text-align: center;
     font-size: 1.5rem;
@@ -319,6 +276,9 @@ a{
     text-decoration: underline;
 }
 .menu-button {
+    display: none;
+}
+#Contact {
     display: none;
 }
 
@@ -500,10 +460,112 @@ a{
     }
 
 }
-
-
-
-
 @media print {
-
+    :root {
+        --gap: 15px;
+        --main-color: #330033;
+        --secondary-color: #530153;
+        --light-gray: #eee;
+        --dark-gray-one: #4a4a4a;
+        --dark-gray-two: #363636;
+        --transparent-green: #06150059;
+        --dark-green: #061500;
+        --print-beige: #fae4d7bb;
+        --print-green: #b5cec4d8;
+    }
+    * {
+        padding-bottom: 0;
+    }
+    body {
+        padding-top: 0;
+    }
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .main-bg{
+        background-color: var(--print-green);
+    }
+    .white-bg, .main-bg {
+        background-image: none;
+        color: black;
+    }
+    .menu,
+    .menu-button-lines,
+    #Portfolio,
+    .bio p,
+    .bio a,
+    .bio ul,
+    .bio button,
+    input,
+    #Publication img,
+    #Publication a {
+        display: none;
+    }
+    #Intro, #Education, #Abilities, #Publication{
+        max-height: fit-content;
+    }
+    #intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-img {
+        background-image: url(../Img/clara-hands-on-the-face.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        max-height: 150px;
+        border-radius: 0;
+        max-width: unset;
+        background-position: center;
+    }
+    .bio {
+        text-align: left;
+    }
+    .bio h2:after {
+        display: block;
+        font-family:'Open Sans', sans-serif;
+        content: "Sou bacharel em Línguas Estrangeiras Aplicadas às Negociações Internacionais na Universidade Federal da Paraíba. Possuo experiência em ensino de inglês, tradução e atendimento ao cliente. Meus interesses são em línguas estrangeiras, principalmente inglês e espanhol. Atualmente estou em busca de uma oportunidade para ingressar na área de web development na função de desenvolvedora jr.";
+        margin-top: var(--gap);
+        font-weight: 500;
+    }
+    #Contact{
+        display: block;
+    }
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+    .contact-content img {
+        width: 30px;
+    }
+    .edu-content{
+        display: block;
+    }
+    .edu-box{
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 20px 0;
+    }
+    .edu-box .degree{
+        font-size: 12px;
+    }
+    .abilities-content td, .abilities-content th {
+        padding-right: 0;
+        line-height: 1.5rem;
+        border-bottom: 0.1rem solid var(--light-gray);
+    } 
+    .publication-content {
+        display: flex;
+        flex-direction: column;
+    }
 }
