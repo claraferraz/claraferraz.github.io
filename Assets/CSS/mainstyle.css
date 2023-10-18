@@ -5,7 +5,7 @@
     --light-gray: #eee;
     --dark-gray-one: #4a4a4a;
     --dark-gray-two: #363636;
-    --transparent-green: #0615008b;
+    --transparent-green: #061500d5;
     --dark-green: #061500;
 }
 * {
@@ -19,7 +19,7 @@ html {
 }
 body {
     font-family:'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     padding-top: 8vh;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -35,6 +35,11 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+}
+
+body {
+    font-size: 2.5rem;
+    padding-top: 0;
 }
 .section {
     min-height: 100vh;
@@ -71,7 +76,7 @@ h3 {
     padding:0rem 3rem;
 }
 .menu h1 {
-    font-size: 2.3rem;
+    font-size: 3rem;
 }
 .menu h1 a {
     color: var(--main-color);
@@ -85,7 +90,7 @@ h3 {
     position:relative;
     display: block;
     padding:2rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: var(--main-color);
     text-decoration: none;
 }
@@ -107,15 +112,14 @@ h3 {
     display: none;
 }
 #intro {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 .bio {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    width: 60%;
 }
 .contact-links {
     margin-top: var(--gap);
@@ -126,14 +130,6 @@ h3 {
 }
 .contact-links a {
     color:white;
-}
-.profile-img {
-    background-image: url(../Img/me.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 25vw;
-    height: 70vh;
-    border-radius: 50rem;
 }
 .exp-box {
     position: relative;
@@ -213,48 +209,27 @@ h3 {
     text-decoration: underline;
 }
 
-.footer {
-    text-align: center;
-    font-size: 1.5rem;
-}
-.footer a {
-    color: var(--main-color);
-    text-decoration: underline;
-}
 
 /* Mobile */
 @media (max-width:800px) {
     body {
-        font-size: 4rem;
+        font-size: 2.5rem;
         padding-top: 0;
     }
     h2 {
-        font-size: 7.5rem;
-        margin-bottom: 6rem;
-    }
-    h3 {
         font-size: 5rem;
+        margin-bottom: 6rem;
     }
     .section {
         min-height: 100vh;
         min-width:90vh;
         position: relative;
     }
-    .profile-img {
-        background-image: url(../Img/clara-hands-on-the-face.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 90vw;
-        max-height: 50vh;
-        border-radius: 0;
-        max-width: unset;
-        background-position: center;
-    }
     .bio {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         text-align: left;
         padding: 2rem;
     }
@@ -305,14 +280,14 @@ h3 {
         justify-content: center;
     }
     .menu-content ul li a {
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .menu-content {
         height: 100%;
         transition: transform 0.4s ease-in-out;
     }
     .menu-content h1 {
-        font-size: 6rem;
+        font-size: 3.5rem;
         padding: 2.5rem;
     }
     .menu-button {
