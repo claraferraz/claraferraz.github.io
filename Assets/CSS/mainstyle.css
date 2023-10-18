@@ -5,7 +5,7 @@
     --light-gray: #eee;
     --dark-gray-one: #4a4a4a;
     --dark-gray-two: #363636;
-    --transparent-green: #061500d5;
+    --transparent-green: #061500c6;
     --dark-green: #061500;
 }
 * {
@@ -19,27 +19,22 @@ html {
 }
 body {
     font-family:'Open Sans', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 8vh;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
     text-transform: uppercase;
 }
 h2 {
-    font-size: 5.5rem;
+    font-size: 4rem;
     margin-bottom: 4rem;
 }
 h3 {
-    font-size: 3rem;
-}
-
-body {
     font-size: 2.5rem;
-    padding-top: 0;
 }
 .section {
     min-height: 100vh;
@@ -76,7 +71,7 @@ body {
     padding:0rem 3rem;
 }
 .menu h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
 }
 .menu h1 a {
     color: var(--main-color);
@@ -90,7 +85,7 @@ body {
     position:relative;
     display: block;
     padding:2rem;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--main-color);
     text-decoration: none;
 }
